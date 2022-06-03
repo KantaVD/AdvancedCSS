@@ -1,0 +1,65 @@
+$background-top: #fff;
+$background-bottom: #686de0;
+$name-font-color: #fff;
+$site-font-color: #B3B6EB;
+
+
+@mixin flexin($direction) {
+    display: flex;
+    flex-direction: $direction;
+}
+
+.opdracht1 {
+    @include flexin(column);
+    font-family: 'Roboto', sans-serif;
+    width: 100%;
+    max-width: 500px;
+    .boven {
+        background-color: #fff;
+        border-top-left-radius: 30px;
+        border-top-right-radius: 30px;
+        width: 100%;
+        box-shadow: 10px 10px 5px #aaaaaa;
+        @include flexin(column);
+        .testimonial {
+            font-size: 28px;
+            line-height: 1.5;
+            margin: 50px 50px 0 50px;
+        }
+        .portretfoto {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 10px solid #FFF;
+            margin: 0 auto -75px auto;
+            position: relative;
+        }
+    }
+    .testi-footer {
+        width: 100%;
+        max-width: 500px;
+        height: 200px;
+        background-color: #686de0;
+        border-bottom-left-radius: 30px;
+        border-bottom-right-radius: 30px;
+        box-shadow: 10px 10px 5px #aaaaaa;
+        @include flexin(column);
+        .name {
+            color: #fff;
+            font-size: 25px;
+            text-transform: uppercase;
+            margin: 85px auto 0 auto;
+        }
+        .site {
+            text-decoration: none;
+            font-size: 25px;
+            color: #B3B6EB;
+            margin: auto;
+        }
+    }
+}
+
+
+
+
+

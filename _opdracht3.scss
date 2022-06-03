@@ -1,0 +1,80 @@
+@mixin sm-trans {
+    transition-property: all;
+    transition-duration: 1000ms;
+}
+@mixin sm-trans-probs {
+    transform: translateX(-200px);
+    width: 240px;
+}
+
+body {
+    margin: 0;
+    #opdracht3{
+        display:flex;
+        flex-direction:column;
+        align-items: flex-end;
+        font-family: 'Roboto', sans-serif;
+        line-height: 2;
+        overflow-x: hidden;
+        .social-menu {
+            float: right;
+            .social-media{
+                height: 40px;
+                width: 240px;
+                overflow: hidden;
+                list-style: none;
+                padding:0px;
+                position: relative;
+                right:-200px;
+                a {
+                    padding: 10px;
+                    display: flex;
+                    color: #FFF;
+                    position: relative;
+                    .icon{
+                        width: 20px;
+                        height: 20x;
+                        color: #fff;
+                        padding-right: 30px;
+                    }
+                }
+            }
+            .social-media.blog {
+                background-color: #e17b77;
+                @include sm-trans();
+            }
+            .social-media.blog:hover {
+                @include sm-trans-probs();  
+            }
+            
+            .social-media.twitter {
+                background-color: #00aced;
+                @include sm-trans();
+            }
+            .social-media.twitter:hover {
+                @include sm-trans-probs();  
+            }
+            .social-media.linkedin {
+                background-color: #007bb6;
+                @include sm-trans();
+            }
+            .social-media.linkedin:hover {
+                @include sm-trans-probs();  
+            }
+            .social-media.facebook {
+                background-color: #3b5998;
+                @include sm-trans();
+            }
+            .social-media.facebook:hover {
+                @include sm-trans-probs();  
+            }
+            .social-media.github {
+                background-color: #333;
+                @include sm-trans();
+            }
+            .social-media.github:hover {
+                @include sm-trans-probs();  
+            }    
+        }
+    }
+}   
